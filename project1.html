@@ -2,9 +2,50 @@
 <html>
 <head>
     <title>project1</title>
-    <script type="text/javascript">
-        function numType1() {
-            document.getElementById()
+    <script>
+        function numType() {
+            var a = document.getElementById('num-a');
+            var b = document.getElementById('num-b');
+            var ra = document.getElementById('radio-a');
+            var rb = document.getElementById('radio-b');
+            var reg = /^[0-9]+.?[0-9]*$/;
+            if(ra.checked) {
+                if(reg.test(a.value)) {
+                    alert('是数字');
+                }
+                else {
+                    alert('不是数字');
+                }
+            }
+            else if(rb.checked) {
+                if(reg.test(b.value)) {
+                    alert('是数字');
+                }
+                else {
+                    alert('不是数字');
+                }
+            }
+        }
+
+        function checkNum() {
+            var a = document.getElementById('num-a');
+            var b = document.getElementById('num-b');
+            var a_int = parseFloat(a.value);
+            var b_int = parseInt(b.value);
+            alert(a_int.toFixed(b_int));
+        }
+
+        function absNum() {
+            var a = document.getElementById('num-a');
+            var b = document.getElementById('num-b');
+            var ra = document.getElementById('radio-a');
+            var rb = document.getElementById('radio-b');
+            if(ra.checked) {
+                alert(Math.abs(parseFloat(a.value)));
+            }
+            else if(rb.checked) {
+                alert(Math.abs(parseFloat(b.value)));
+            }
         }
     </script>
 </head>
@@ -14,9 +55,9 @@
         <label>Number B:<input id="radio-b" type="radio" name="math-obj" value="b"></label><input id="num-b" type="text">
     </div>
     <div>
-        <button>判断当前选中的输入框输入内容是否为数字</button>
-        <button>把 A 四舍五入为 B 个小数位数的数字</button>
-        <button>当前选中数字的绝对值</button>
+        <button onclick="numType()">判断当前选中的输入框输入内容是否为数字</button>
+        <button onclick="checkNum()">把 A 四舍五入为 B 个小数位数的数字</button>
+        <button onclick="absNum()">当前选中数字的绝对值</button>
         <button>对当前选中的数字进行上舍入</button>
         <button>对当前选中的数字进行下舍入</button>
         <button>把当前选中的数字四舍五入为最接近的整数</button>
