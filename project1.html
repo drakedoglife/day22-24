@@ -11,18 +11,18 @@
             var reg = /^[0-9]+.?[0-9]*$/;
             if(ra.checked) {
                 if(reg.test(a.value)) {
-                    alert('是数字');
+                    document.getElementById('result').innerHTML = '是数字';
                 }
                 else {
-                    alert('不是数字');
+                    document.getElementById('result').innerHTML = '不是数字';
                 }
             }
             else if(rb.checked) {
                 if(reg.test(b.value)) {
-                    alert('是数字');
+                    document.getElementById('result').innerHTML = '是数字';
                 }
                 else {
-                    alert('不是数字');
+                    document.getElementById('result').innerHTML = '不是数字';
                 }
             }
         }
@@ -32,7 +32,7 @@
             var b = document.getElementById('num-b');
             var a_int = parseFloat(a.value);
             var b_int = parseInt(b.value);
-            alert(a_int.toFixed(b_int));
+            document.getElementById('result').innerHTML = a_int.toFixed(b_int);
         }
 
         function absNum() {
@@ -41,10 +41,10 @@
             var ra = document.getElementById('radio-a');
             var rb = document.getElementById('radio-b');
             if(ra.checked) {
-                alert(Math.abs(parseFloat(a.value)));
+                document.getElementById('result').innerHTML = Math.abs(parseFloat(a.value));
             }
             else if(rb.checked) {
-                alert(Math.abs(parseFloat(b.value)));
+                document.getElementById('result').innerHTML = Math.abs(parseFloat(b.value));
             }
         }
 
@@ -54,10 +54,10 @@
             var ra = document.getElementById('radio-a');
             var rb = document.getElementById('radio-b');
             if(ra.checked) {
-                alert(Math.ceil(parseFloat(a.value)));
+                document.getElementById('result').innerHTML = Math.ceil(parseFloat(a.value));
             }
             else if(rb.checked) {
-                alert(Math.ceil(parseFloat(b.value)));
+                document.getElementById('result').innerHTML = Math.ceil(parseFloat(b.value));
             }
         }
 
@@ -67,10 +67,10 @@
             var ra = document.getElementById('radio-a');
             var rb = document.getElementById('radio-b');
             if(ra.checked) {
-                alert(Math.floor(parseFloat(a.value)));
+                document.getElementById('result').innerHTML = Math.floor(parseFloat(a.value));
             }
             else if(rb.checked) {
-                alert(Math.floor(parseFloat(b.value)));
+                document.getElementById('result').innerHTML = Math.floor(parseFloat(b.value));
             }
         }
 
@@ -80,23 +80,23 @@
             var ra = document.getElementById('radio-a');
             var rb = document.getElementById('radio-b');
             if(ra.checked) {
-                alert(Math.round(parseFloat(a.value)));
+                document.getElementById('result').innerHTML = Math.round(parseFloat(a.value));
             }
             else if(rb.checked) {
-                alert(Math.round(parseFloat(b.value)));
+                document.getElementById('result').innerHTML = Math.round(parseFloat(b.value));
             }
         }
 
         function maxNum() {
             var a = document.getElementById('num-a');
             var b = document.getElementById('num-b');
-            alert(Math.max(a.value, b.value));
+            document.getElementById('result').innerHTML = Math.max(a.value, b.value);
         }
 
         function minNum() {
             var a = document.getElementById('num-a');
             var b = document.getElementById('num-b');
-            alert(Math.min(a.value, b.value));
+            document.getElementById('result').innerHTML = Math.min(a.value, b.value);
         }
     </script>
 </head>
