@@ -74,13 +74,11 @@
             var ta = document.getElementById('str-a');
             var tb = document.getElementById('str-b');
             var p = document.getElementById('result');
-            var reg = /\n/;
-            console.log(ta.value.match(reg));
             if(a.checked) {
-                //p.innerHTML = ta.value.match(reg).length;
+                p.innerHTML = ta.value.split('\n').length;
             }
             else if(b.checked) {
-                //p.innerHTML = tb.value.match(reg).length;
+                p.innerHTML = tb.value.split('\n').length;
             }
         }
     </script>
