@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>project7</title>
+</head>
+<body>
+	<input id="queue-input" type="text">
+	<p id="queue-cont">栈内容：apple-&gt;pear</p>    
+	<button id="in-btn">进栈</button>
+	<button id="out-btn">退栈</button>
+	<button id="font-btn">打印栈顶元素内容</button>
+	<button id="empty-btn">判断栈是否为空</button>
+
+	<script>
+		var queue = ["apple", "pear"];
+		var btn = document.querySelectorAll('button');
+		var ipt = document.getElementById('queue-input');
+		var pp = document.getElementById('queue-cont');
+
+		btn[0].onclick = function() {
+			queue.push(ipt.value);
+			print();
+		}
+
+		btn[1].onclick = function() {
+			queue.pop();
+			print();
+		}
+
+		btn[2].onclick = function() {
+			console.log(queue[queue.length - 1]);
+			print();
+		}
+
+		btn[3].onclick = function() {
+			if(queue.length > 0) {
+				alert('不为空');
+			}
+			else {
+				alert('为空');
+			}
+			print();
+		}
+
+		function print() {
+			pp.innerHTML = queue.join('->');
+		}
+	</script>
+</body>
+</html>
